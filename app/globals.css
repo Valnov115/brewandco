@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* ── Raw palette ── */
+  --color-cream: #F2E8D9;
+  --color-parchment: #FAF3EC;
+  --color-espresso: #1E0E02;
+  --color-mocha: #4A2C1A;
+  --color-latte: #9B7355;
+  --color-terracotta: #C85A38;
+  --color-terracotta-dark: #A3451E;
+  --color-charcoal: #1A1A1A;
+  --color-sage: #7B8B3A;
+  --color-teal-brew: #2A7A6A;
+  --color-amber-brew: #D4A832;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* ── Semantic tokens ── */
+  --color-bg: #F2E8D9;
+  --color-surface: #FAF3EC;
+  --color-text: #1E0E02;
+  --color-text-body: #4A2C1A;
+  --color-text-muted: #9B7355;
+  --color-accent: #C85A38;
+  --color-accent-dark: #A3451E;
+  --color-cta: #1A1A1A;
+  --color-category-coffee: #7B8B3A;
+  --color-category-drinks: #2A7A6A;
+  --color-category-tea: #C85A38;
+  --color-category-bakery: #D4A832;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* ── Font families ── */
+  --font-display: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
+  --font-body: var(--font-dmsans), 'DM Sans', sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+
+  /* ── Shadows (warm-tinted) ── */
+  --shadow-warm-sm: 0 1px 3px rgba(74, 44, 26, 0.08);
+  --shadow-warm-md: 0 4px 16px rgba(74, 44, 26, 0.12);
+  --shadow-warm-lg: 0 8px 32px rgba(74, 44, 26, 0.16);
+
+  /* ── Border radius overrides ── */
+  --radius-sm: 4px;
+  --radius-DEFAULT: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
 }
