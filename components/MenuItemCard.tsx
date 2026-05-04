@@ -1,9 +1,5 @@
 import Image from "next/image";
-import { type MenuItem, CATEGORY_COLORS } from "@/app/data/menu";
-
-function formatPrice(price: number): string {
-  return `£${price.toFixed(2)}`;
-}
+import { type MenuItem, CATEGORY_COLORS, formatPrice } from "@/app/data/menu";
 
 export default function MenuItemCard({ item }: { item: MenuItem }) {
   const circleColor = CATEGORY_COLORS[item.category];

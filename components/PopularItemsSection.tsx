@@ -1,10 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { POPULAR_ITEMS, CATEGORY_COLORS, type MenuItem } from "@/app/data/menu";
-
-function formatPrice(price: number): string {
-  return `£${price.toFixed(2)}`;
-}
+import { POPULAR_ITEMS, CATEGORY_COLORS, formatPrice, type MenuItem } from "@/app/data/menu";
 
 const FEATURED = POPULAR_ITEMS.slice(0, 6);
 

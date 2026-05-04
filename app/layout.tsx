@@ -3,6 +3,8 @@ import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ModalProvider } from "@/components/ModalContext";
+import ReservationModalRoot from "@/components/ReservationModalRoot";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -33,9 +35,12 @@ export default function RootLayout({
       className={`${jakarta.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <ModalProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <ReservationModalRoot />
+        </ModalProvider>
       </body>
     </html>
   );

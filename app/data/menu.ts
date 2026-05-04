@@ -155,7 +155,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Blueberry Scone",
     description: "Tender buttermilk scone studded with fresh blueberries and a vanilla glaze.",
     price: 4.0,
-    pexelsId: 1775043,
+    pexelsId: 2531500,
   },
   {
     id: "chocolate-babka",
@@ -215,3 +215,7 @@ export const CATEGORIES: MenuCategory[] = [
   "Pastries",
   "Sandwiches",
 ];
+
+export function formatPrice(price: number): string {
+  return `£${price.toFixed(2)}`;
+}

@@ -19,6 +19,7 @@ export default function CategoryNav({ active, onChange }: CategoryNavProps) {
           {ALL_TABS.map((tab) => (
             <button
               key={tab}
+              type="button"
               onClick={() => onChange(tab)}
               className={`shrink-0 inline-flex items-center rounded-full px-5 py-2 text-sm font-body font-medium transition-all ${
                 tab === active

@@ -59,6 +59,7 @@ export default function ReservationModal({
     >
       <div className="relative w-full max-w-md rounded-2xl bg-surface p-8 shadow-warm-lg">
         <button
+          type="button"
           onClick={handleClose}
           className="absolute right-5 top-5 inline-flex h-8 w-8 items-center justify-center rounded-full text-text-muted hover:bg-bg hover:text-text transition-colors"
           aria-label="Close reservation modal"
@@ -94,6 +95,7 @@ export default function ReservationModal({
               </p>
             </div>
             <button
+              type="button"
               onClick={handleClose}
               className="inline-flex items-center gap-2 rounded-full bg-cta px-6 py-3 text-base font-body font-medium text-cream hover:bg-espresso active:scale-95 transition-all"
             >
