@@ -14,6 +14,12 @@ export interface MenuItem {
   price: number;
   badge?: MenuBadge;
   pexelsId: number;
+  localImage?: string; // overrides pexelsId when set (path relative to /public)
+}
+
+export function getItemImageUrl(item: MenuItem, width = 600): string {
+  if (item.localImage) return item.localImage;
+  return `https://images.pexels.com/photos/${item.pexelsId}/pexels-photo-${item.pexelsId}.jpeg?auto=compress&cs=tinysrgb&w=${width}`;
 }
 
 export const CATEGORY_COLORS: Record<MenuCategory, string> = {
@@ -59,6 +65,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 6.5,
     badge: "Popular",
     pexelsId: 5305639,
+    localImage: "/menu/Caramel_Macchiato.png",
   },
   {
     id: "hazelnut-latte",
@@ -67,6 +74,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Espresso blended with house-made hazelnut syrup and steamed oat milk.",
     price: 6.0,
     pexelsId: 1539803,
+    localImage: "/menu/Hazelnut_Latte.png",
   },
   {
     id: "dirty-chai",
@@ -104,6 +112,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 8.0,
     badge: "House Favorite",
     pexelsId: 2967784,
+    localImage: "/menu/Nutella_Mudslide.png",
   },
   {
     id: "strawberry-matcha-latte",
@@ -112,6 +121,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Ceremonial grade matcha layered over house strawberry milk, served iced.",
     price: 7.0,
     pexelsId: 28730007,
+    localImage: "/menu/Strawberry_Matcha.png",
   },
   {
     id: "iced-horchata-latte",
@@ -121,6 +131,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 6.5,
     badge: "House Favorite",
     pexelsId: 2878742,
+    localImage: "/menu/Iced_Horchata_Latte.png",
   },
   {
     id: "hot-chocolate",
@@ -165,6 +176,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 5.5,
     badge: "Popular",
     pexelsId: 2529259,
+    localImage: "/menu/Chocolate_Babka.png",
   },
   {
     id: "pistachio-danish",

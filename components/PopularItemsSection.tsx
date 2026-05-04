@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { POPULAR_ITEMS, CATEGORY_COLORS, formatPrice, type MenuItem } from "@/app/data/menu";
+import { POPULAR_ITEMS, CATEGORY_COLORS, formatPrice, getItemImageUrl, type MenuItem } from "@/app/data/menu";
 
 const FEATURED = POPULAR_ITEMS.slice(0, 6);
 
@@ -32,7 +32,7 @@ export default function PopularItemsSection() {
                 {/* Large image area */}
                 <div className={`relative h-56 w-full ${circleColor}`}>
                   <Image
-                    src={`https://images.pexels.com/photos/${item.pexelsId}/pexels-photo-${item.pexelsId}.jpeg?auto=compress&cs=tinysrgb&w=600`}
+                    src={getItemImageUrl(item, 600)}
                     alt={item.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { type MenuItem, CATEGORY_COLORS, formatPrice } from "@/app/data/menu";
+import { type MenuItem, CATEGORY_COLORS, formatPrice, getItemImageUrl } from "@/app/data/menu";
 
 export default function MenuItemCard({ item }: { item: MenuItem }) {
   const bgColor = CATEGORY_COLORS[item.category];
@@ -9,7 +9,7 @@ export default function MenuItemCard({ item }: { item: MenuItem }) {
       {/* Image */}
       <div className={`relative h-48 w-full ${bgColor}`}>
         <Image
-          src={`https://images.pexels.com/photos/${item.pexelsId}/pexels-photo-${item.pexelsId}.jpeg?auto=compress&cs=tinysrgb&w=400`}
+          src={getItemImageUrl(item, 400)}
           alt={item.name}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
