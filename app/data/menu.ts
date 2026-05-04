@@ -58,7 +58,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Vanilla-sweetened milk topped with espresso shots and a drizzle of house caramel.",
     price: 6.5,
     badge: "Popular",
-    pexelsId: 1694201,
+    pexelsId: 5305639,
   },
   {
     id: "hazelnut-latte",
@@ -94,7 +94,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Blended espresso with caramel sauce, milk and ice topped with whipped cream.",
     price: 7.5,
     badge: "Popular",
-    pexelsId: 3065176,
+    pexelsId: 17558646,
   },
   {
     id: "nutella-mudslide",

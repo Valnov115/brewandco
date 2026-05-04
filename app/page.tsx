@@ -42,7 +42,7 @@ const EVENTS = [
     dayLabel: "Every Saturday",
     timeLabel: "10:00 AM",
     nextDate: getNextOccurrence(6),
-    pexelsId: 1251175,
+    pexelsId: 34505585,
     accentClass: "bg-category-coffee",
   },
 ];
