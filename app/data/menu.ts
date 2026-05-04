@@ -19,8 +19,8 @@ export interface MenuItem {
 export const CATEGORY_COLORS: Record<MenuCategory, string> = {
   "Espresso Drinks": "bg-category-coffee",
   "Cold Drinks": "bg-category-drinks",
-  Pastries: "bg-category-bakery",
-  Sandwiches: "bg-category-tea",
+  "Pastries": "bg-category-bakery",
+  "Sandwiches": "bg-category-tea",
 };
 
 export const MENU_ITEMS: MenuItem[] = [
