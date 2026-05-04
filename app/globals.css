@@ -40,7 +40,7 @@
 
   /* ── Border radius overrides ── */
   --radius-sm: 4px;
-  --radius-DEFAULT: 8px;
+  --radius: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
   --radius-2xl: 24px;

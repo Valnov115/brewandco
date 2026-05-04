@@ -93,7 +93,7 @@ Standard Tailwind spacing scale — no overrides. Key stops:
 | CSS variable | Value | Tailwind class |
 |---|---|---|
 | `--radius-sm` | `4px` | `rounded-sm` |
-| `--radius-DEFAULT` | `8px` | `rounded` |
+| `--radius` | `8px` | `rounded` |
 | `--radius-lg` | `12px` | `rounded-lg` |
 | `--radius-xl` | `16px` | `rounded-xl` |
 | `--radius-2xl` | `24px` | `rounded-2xl` |
