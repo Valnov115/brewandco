@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -16,7 +18,8 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "Brew & Co",
-  description: "Premium coffee and beverages.",
+  description:
+    "Specialty coffee, fresh pastries and light lunches in the heart of London.",
 };
 
 export default function RootLayout({
@@ -29,7 +32,11 @@ export default function RootLayout({
       lang="en"
       className={`${jakarta.variable} ${dmSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
