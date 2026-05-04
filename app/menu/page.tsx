@@ -36,7 +36,7 @@ export default function MenuPage() {
       {/* Page header with background image */}
       <section className="relative h-64 md:h-80 overflow-hidden flex items-end">
         <Image
-          src="https://images.pexels.com/photos/35134952/pexels-photo-35134952.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          src="/menu/menu-header.png"
           alt="Brew & Co coffee shop interior"
           fill
           priority
