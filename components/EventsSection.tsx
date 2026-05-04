@@ -47,7 +47,7 @@ export default function EventsSection({ events }: EventsSectionProps) {
                 key={event.title}
                 className="overflow-hidden rounded-2xl bg-bg shadow-warm-md flex flex-col"
               >
-                <div className="relative h-52 w-full">
+                <div className="relative h-64 w-full">
                   <Image
                     src={`https://images.pexels.com/photos/${event.pexelsId}/pexels-photo-${event.pexelsId}.jpeg?auto=compress&cs=tinysrgb&w=800`}
                     alt={event.title}

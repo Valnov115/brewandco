@@ -89,7 +89,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
             <Image
-              src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg"
+              src="https://images.pexels.com/photos/29516134/pexels-photo-29516134.jpeg?auto=compress&cs=tinysrgb&w=900"
               alt="James and Priya Caldwell behind the counter at Brew & Co"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

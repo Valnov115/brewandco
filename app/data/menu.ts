@@ -58,7 +58,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Vanilla-sweetened milk topped with espresso shots and a drizzle of house caramel.",
     price: 6.5,
     badge: "Popular",
-    pexelsId: 1695052,
+    pexelsId: 1694201,
   },
   {
     id: "hazelnut-latte",
@@ -66,7 +66,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Hazelnut Latte",
     description: "Espresso blended with house-made hazelnut syrup and steamed oat milk.",
     price: 6.0,
-    pexelsId: 1251175,
+    pexelsId: 1539803,
   },
   {
     id: "dirty-chai",
@@ -75,7 +75,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Double espresso pulled through our spiced masala chai concentrate with steamed milk.",
     price: 6.5,
     badge: "House Favorite",
-    pexelsId: 4109903,
+    pexelsId: 2396220,
   },
   // ── Cold Drinks ───────────────────────────────────────────────────
   {
@@ -94,7 +94,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Blended espresso with caramel sauce, milk and ice topped with whipped cream.",
     price: 7.5,
     badge: "Popular",
-    pexelsId: 3679715,
+    pexelsId: 3065176,
   },
   {
     id: "nutella-mudslide",
@@ -103,7 +103,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Rich blended shake with Nutella, espresso and a chocolate drizzle.",
     price: 8.0,
     badge: "House Favorite",
-    pexelsId: 3727250,
+    pexelsId: 2967784,
   },
   {
     id: "strawberry-matcha-latte",
@@ -111,7 +111,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Strawberry Matcha Latte",
     description: "Ceremonial grade matcha layered over house strawberry milk, served iced.",
     price: 7.0,
-    pexelsId: 5946059,
+    pexelsId: 28730007,
   },
   {
     id: "iced-horchata-latte",
@@ -120,7 +120,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Espresso poured over creamy cinnamon-rice milk on ice.",
     price: 6.5,
     badge: "House Favorite",
-    pexelsId: 2067396,
+    pexelsId: 2878742,
   },
   {
     id: "hot-chocolate",
@@ -128,7 +128,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Hot Chocolate",
     description: "Velvety blend of single-origin dark chocolate and steamed whole milk.",
     price: 5.0,
-    pexelsId: 3727249,
+    pexelsId: 3309670,
   },
   // ── Pastries ──────────────────────────────────────────────────────
   {
@@ -138,7 +138,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Butter croissant filled with frangipane and finished with toasted almond flakes.",
     price: 4.5,
     badge: "Popular",
-    pexelsId: 3892469,
+    pexelsId: 8105045,
   },
   {
     id: "cardamom-morning-bun",
@@ -155,7 +155,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Blueberry Scone",
     description: "Tender buttermilk scone studded with fresh blueberries and a vanilla glaze.",
     price: 4.0,
-    pexelsId: 2531500,
+    pexelsId: 3450560,
   },
   {
     id: "chocolate-babka",
@@ -164,7 +164,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Twisted brioche swirled with rich dark chocolate and a hint of sea salt.",
     price: 5.5,
     badge: "Popular",
-    pexelsId: 4110101,
+    pexelsId: 2529259,
   },
   {
     id: "pistachio-danish",
@@ -183,7 +183,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Crispy sourdough baguette with prosciutto di Parma, brie, fig jam and rocket.",
     price: 12.0,
     badge: "Popular",
-    pexelsId: 1633578,
+    pexelsId: 17498978,
   },
   {
     id: "smashed-avocado-ciabatta",
@@ -192,7 +192,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Herbed avocado on toasted ciabatta with pickled red onion, chilli flakes and a poached egg.",
     price: 11.0,
     badge: "House Favorite",
-    pexelsId: 1640777,
+    pexelsId: 1656685,
   },
   {
     id: "roasted-chicken-pesto-panini",
@@ -201,7 +201,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Grilled panini with herb-roasted chicken, sun-dried tomato pesto and provolone.",
     price: 13.0,
     badge: "Popular",
-    pexelsId: 3607284,
+    pexelsId: 1279330,
   },
 ];
 

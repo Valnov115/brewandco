@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
   MENU_ITEMS,
   CATEGORIES,
@@ -32,21 +33,35 @@ export default function MenuPage() {
 
   return (
     <div className="bg-bg min-h-screen">
-      {/* Page header */}
-      <div className="py-16 bg-surface border-b border-mocha/10">
-        <div className="mx-auto max-w-7xl px-6">
-          <span className="font-body text-xs font-medium uppercase tracking-widest text-accent">
+      {/* Page header with background image */}
+      <section className="relative h-64 md:h-80 overflow-hidden flex items-end">
+        <Image
+          src="https://images.pexels.com/photos/35134952/pexels-photo-35134952.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          alt="Brew & Co coffee shop interior"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+          quality={85}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: "rgba(30,14,2,0.65)" }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-6 pb-10 w-full">
+          <span className="font-body text-xs font-medium uppercase tracking-widest text-accent block mb-2">
             What We Serve
           </span>
-          <h1 className="mt-2 font-display text-4xl md:text-5xl font-extrabold leading-tight text-text">
+          <h1 className="font-display text-4xl md:text-5xl font-extrabold leading-tight text-cream">
             Our Menu
           </h1>
-          <p className="mt-3 font-body text-base text-text-body max-w-md">
+          <p className="mt-2 font-body text-base text-cream/80 max-w-md">
             Hand-crafted drinks, fresh-baked pastries and made-to-order
             sandwiches. Something for every moment of the day.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Sticky category tabs */}
       <CategoryNav active={activeCategory} onChange={setActiveCategory} />

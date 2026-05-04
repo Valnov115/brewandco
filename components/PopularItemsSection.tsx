@@ -21,36 +21,39 @@ export default function PopularItemsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {FEATURED.map((item: MenuItem) => {
             const circleColor = CATEGORY_COLORS[item.category];
             return (
               <div
                 key={item.id}
-                className="flex items-center gap-4 rounded-xl bg-surface p-5 shadow-warm-sm hover:shadow-warm-md transition-shadow"
+                className="flex flex-col rounded-2xl bg-surface shadow-warm-md overflow-hidden hover:shadow-warm-lg transition-shadow"
               >
-                {/* Image circle */}
-                <div className={`relative h-20 w-20 shrink-0 rounded-full ${circleColor}`}>
+                {/* Large image area */}
+                <div className={`relative h-56 w-full ${circleColor}`}>
                   <Image
-                    src={`https://images.pexels.com/photos/${item.pexelsId}/pexels-photo-${item.pexelsId}.jpeg?auto=compress&cs=tinysrgb&w=160`}
+                    src={`https://images.pexels.com/photos/${item.pexelsId}/pexels-photo-${item.pexelsId}.jpeg?auto=compress&cs=tinysrgb&w=600`}
                     alt={item.name}
-                    width={80}
-                    height={80}
-                    className="absolute inset-0 h-full w-full rounded-full object-cover"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
                   />
-                </div>
-
-                {/* Info */}
-                <div className="flex flex-col gap-1 min-w-0">
                   {item.badge && (
-                    <span className="inline-block rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-body font-medium text-accent self-start">
+                    <span className="absolute top-3 left-3 inline-block rounded-full bg-espresso/80 backdrop-blur-sm px-3 py-1 text-xs font-body font-medium text-cream">
                       {item.badge}
                     </span>
                   )}
-                  <span className="font-display text-base font-semibold text-text leading-snug">
+                </div>
+
+                {/* Text */}
+                <div className="flex flex-col gap-2 p-5">
+                  <span className="font-display text-lg font-semibold text-text leading-snug">
                     {item.name}
                   </span>
-                  <span className="font-display text-base font-semibold text-accent">
+                  <p className="font-body text-sm text-text-muted leading-relaxed line-clamp-2">
+                    {item.description}
+                  </p>
+                  <span className="font-display text-xl font-semibold text-accent mt-1">
                     {formatPrice(item.price)}
                   </span>
                 </div>
@@ -59,7 +62,7 @@ export default function PopularItemsSection() {
           })}
         </div>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-12 flex justify-center">
           <Link
             href="/menu"
             className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-base font-body font-medium text-accent hover:bg-accent/10 active:scale-95 transition-all border border-accent/30"

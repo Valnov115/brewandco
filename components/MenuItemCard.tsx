@@ -2,52 +2,44 @@ import Image from "next/image";
 import { type MenuItem, CATEGORY_COLORS, formatPrice } from "@/app/data/menu";
 
 export default function MenuItemCard({ item }: { item: MenuItem }) {
-  const circleColor = CATEGORY_COLORS[item.category];
+  const bgColor = CATEGORY_COLORS[item.category];
 
   return (
-    <div className="flex flex-col rounded-xl bg-surface p-5 shadow-warm-sm hover:shadow-warm-md transition-shadow">
-      {/* Image circle */}
-      <div className="flex justify-center mb-4">
-        <div className={`relative h-28 w-28 rounded-full ${circleColor}`}>
-          <Image
-            src={`https://images.pexels.com/photos/${item.pexelsId}/pexels-photo-${item.pexelsId}.jpeg?auto=compress&cs=tinysrgb&w=224`}
-            alt={`${item.name}`}
-            width={112}
-            height={112}
-            className="absolute inset-0 h-full w-full rounded-full object-cover"
-          />
-        </div>
-      </div>
-
-      {/* Badge */}
-      {item.badge && (
-        <div className="flex justify-center mb-2">
+    <div className="flex flex-col rounded-2xl bg-surface shadow-warm-sm hover:shadow-warm-md transition-shadow overflow-hidden">
+      {/* Image */}
+      <div className={`relative h-48 w-full ${bgColor}`}>
+        <Image
+          src={`https://images.pexels.com/photos/${item.pexelsId}/pexels-photo-${item.pexelsId}.jpeg?auto=compress&cs=tinysrgb&w=400`}
+          alt={item.name}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          className="object-cover"
+        />
+        {item.badge && (
           <span
-            className={`inline-block rounded-full px-3 py-0.5 text-xs font-body font-medium uppercase tracking-widest ${
+            className={`absolute top-3 left-3 inline-block rounded-full px-2.5 py-0.5 text-xs font-body font-medium ${
               item.badge === "House Favorite"
-                ? "bg-accent/10 text-accent"
-                : "bg-category-coffee/10 text-category-coffee"
+                ? "bg-accent/90 text-cream"
+                : "bg-espresso/80 text-cream"
             }`}
           >
             {item.badge}
           </span>
-        </div>
-      )}
+        )}
+      </div>
 
-      {/* Name */}
-      <h3 className="font-display text-base font-semibold text-text text-center leading-snug mb-1">
-        {item.name}
-      </h3>
-
-      {/* Description */}
-      <p className="font-body text-sm text-text-muted text-center leading-relaxed flex-1 mb-3">
-        {item.description}
-      </p>
-
-      {/* Price */}
-      <p className="font-display text-lg font-semibold text-accent text-center">
-        {formatPrice(item.price)}
-      </p>
+      {/* Info */}
+      <div className="flex flex-col gap-1.5 p-4 flex-1">
+        <h3 className="font-display text-base font-semibold text-text leading-snug">
+          {item.name}
+        </h3>
+        <p className="font-body text-sm text-text-muted leading-relaxed line-clamp-2 flex-1">
+          {item.description}
+        </p>
+        <span className="font-display text-lg font-semibold text-accent mt-1">
+          {formatPrice(item.price)}
+        </span>
+      </div>
     </div>
   );
 }
