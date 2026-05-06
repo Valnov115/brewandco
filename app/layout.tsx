@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ModalProvider } from "@/components/ModalContext";
 import ReservationModalRoot from "@/components/ReservationModalRoot";
+import ChatWidget from "@/components/ChatWidget";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -40,6 +41,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
           <ReservationModalRoot />
+          <ChatWidget />
         </ModalProvider>
       </body>
     </html>

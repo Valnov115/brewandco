@@ -27,6 +27,8 @@ export default function ReservationModal({
 }: ReservationModalProps) {
   const [form, setForm] = useState<FormState>(INITIAL_FORM);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   if (!isOpen) return null;
 
@@ -36,14 +38,38 @@ export default function ReservationModal({
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+    try {
+      const bookingTime = `${form.date} at ${form.time}`;
+      const res = await fetch('/api/reservation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          guestName: form.name,
+          groupSize: Number(form.partySize),
+          bookingTime,
+        }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.body || data?.error || `HTTP ${res.status}`);
+      }
+      setSubmitted(true);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : 'Unknown error';
+      setError(`Something went wrong: ${msg}`);
+    } finally {
+      setLoading(false);
+    }
   }
 
   function handleClose() {
     setForm(INITIAL_FORM);
     setSubmitted(false);
+    setError(null);
     onClose();
   }
 
@@ -186,11 +212,15 @@ export default function ReservationModal({
                 />
               </div>
 
+              {error && (
+                <p className="text-sm font-body text-terracotta">{error}</p>
+              )}
               <button
                 type="submit"
-                className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-base font-body font-medium text-cream hover:bg-accent-dark active:scale-95 transition-all"
+                disabled={loading}
+                className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-base font-body font-medium text-cream hover:bg-accent-dark active:scale-95 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Confirm Reservation
+                {loading ? 'Reserving…' : 'Confirm Reservation'}
               </button>
             </form>
           </>
