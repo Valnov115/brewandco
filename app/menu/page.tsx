@@ -36,13 +36,13 @@ export default function MenuPage() {
       {/* Page header with background image */}
       <section className="relative h-64 md:h-80 overflow-hidden flex items-end">
         <Image
-          src="/menu/menu-header.png"
+          src="/images/menu/menu-header-original.webp"
           alt="Brew & Co coffee shop interior"
           fill
           priority
           sizes="100vw"
           className="object-cover object-center"
-          quality={85}
+          quality={100}
         />
         <div
           className="absolute inset-0"

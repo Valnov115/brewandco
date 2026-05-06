@@ -39,6 +39,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 3.5,
     badge: "House Favorite",
     pexelsId: 312418,
+    localImage: "/images/menu/espresso-medium.webp",
   },
   {
     id: "doppio",
@@ -47,6 +48,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Double shot espresso — bold and concentrated for the serious coffee lover.",
     price: 4.0,
     pexelsId: 302899,
+    localImage: "/images/menu/doppio-medium.webp",
   },
   {
     id: "flat-white",
@@ -56,6 +58,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 5.5,
     badge: "Popular",
     pexelsId: 350478,
+    localImage: "/images/menu/flat-white-medium.webp",
   },
   {
     id: "caramel-macchiato",
@@ -65,7 +68,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 6.5,
     badge: "Popular",
     pexelsId: 5305639,
-    localImage: "/menu/Caramel_Macchiato.png",
+    localImage: "/images/menu/caramel-macchiato-medium.webp",
   },
   {
     id: "hazelnut-latte",
@@ -74,7 +77,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Espresso blended with house-made hazelnut syrup and steamed oat milk.",
     price: 6.0,
     pexelsId: 1539803,
-    localImage: "/menu/Hazelnut_Latte.png",
+    localImage: "/images/menu/hazelnut-latte-medium.webp",
   },
   {
     id: "dirty-chai",
@@ -84,6 +87,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 6.5,
     badge: "House Favorite",
     pexelsId: 2396220,
+    localImage: "/images/menu/dirty-chai-medium.webp",
   },
   // ── Cold Drinks ───────────────────────────────────────────────────
   {
@@ -94,6 +98,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 5.5,
     badge: "Popular",
     pexelsId: 1194030,
+    localImage: "/images/menu/cold-brew-medium.webp",
   },
   {
     id: "caramel-frappuccino",
@@ -103,6 +108,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 7.5,
     badge: "Popular",
     pexelsId: 17558646,
+    localImage: "/images/menu/caramel-frappuccino-medium.webp",
   },
   {
     id: "nutella-mudslide",
@@ -112,7 +118,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 8.0,
     badge: "House Favorite",
     pexelsId: 2967784,
-    localImage: "/menu/Nutella_Mudslide.png",
+    localImage: "/images/menu/nutella-mudslide-medium.webp",
   },
   {
     id: "strawberry-matcha-latte",
@@ -121,7 +127,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Ceremonial grade matcha layered over house strawberry milk, served iced.",
     price: 7.0,
     pexelsId: 28730007,
-    localImage: "/menu/Strawberry_Matcha.png",
+    localImage: "/images/menu/strawberry-matcha-latte-medium.webp",
   },
   {
     id: "iced-horchata-latte",
@@ -131,7 +137,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 6.5,
     badge: "House Favorite",
     pexelsId: 2878742,
-    localImage: "/menu/Iced_Horchata_Latte.png",
+    localImage: "/images/menu/iced-horchata-latte-medium.webp",
   },
   {
     id: "hot-chocolate",
@@ -140,6 +146,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Velvety blend of single-origin dark chocolate and steamed whole milk.",
     price: 5.0,
     pexelsId: 3309670,
+    localImage: "/images/menu/hot-chocolate-medium.webp",
   },
   // ── Pastries ──────────────────────────────────────────────────────
   {
@@ -150,6 +157,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 4.5,
     badge: "Popular",
     pexelsId: 8105045,
+    localImage: "/images/menu/almond-croissant-medium.webp",
   },
   {
     id: "cardamom-morning-bun",
@@ -159,6 +167,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 4.0,
     badge: "House Favorite",
     pexelsId: 1775043,
+    localImage: "/images/menu/cardamom-morning-bun-medium.webp",
   },
   {
     id: "blueberry-scone",
@@ -167,6 +176,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Tender buttermilk scone studded with fresh blueberries and a vanilla glaze.",
     price: 4.0,
     pexelsId: 3450560,
+    localImage: "/images/menu/blueberry-scone-medium.webp",
   },
   {
     id: "chocolate-babka",
@@ -176,7 +186,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 5.5,
     badge: "Popular",
     pexelsId: 2529259,
-    localImage: "/menu/Chocolate_Babka.png",
+    localImage: "/images/menu/chocolate-babka-medium.webp",
   },
   {
     id: "pistachio-danish",
@@ -186,6 +196,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 5.0,
     badge: "House Favorite",
     pexelsId: 1586942,
+    localImage: "/images/menu/pistachio-danish-medium.webp",
   },
   // ── Sandwiches ────────────────────────────────────────────────────
   {
@@ -196,6 +207,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 12.0,
     badge: "Popular",
     pexelsId: 17498978,
+    localImage: "/images/menu/prosciutto-brie-baguette-medium.webp",
   },
   {
     id: "smashed-avocado-ciabatta",
@@ -205,6 +217,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 11.0,
     badge: "House Favorite",
     pexelsId: 1656685,
+    localImage: "/images/menu/smashed-avocado-ciabatta-medium.webp",
   },
   {
     id: "roasted-chicken-pesto-panini",
@@ -214,6 +227,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 13.0,
     badge: "Popular",
     pexelsId: 1279330,
+    localImage: "/images/menu/roasted-chicken-pesto-panini-medium.webp",
   },
 ];
 

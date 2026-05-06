@@ -14,6 +14,7 @@ export default function MenuItemCard({ item }: { item: MenuItem }) {
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           className="object-cover"
+          quality={100}
         />
         {item.badge && (
           <span

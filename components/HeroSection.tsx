@@ -10,13 +10,13 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-[85vh] flex items-center overflow-hidden">
       <Image
-        src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg"
+        src="/images/hero/hero-bg-original.webp"
         alt="Warm coffee shop interior with rich espresso drinks"
         fill
         priority
         sizes="100vw"
         className="object-cover object-center"
-        quality={85}
+        quality={100}
       />
       <div
         className="absolute inset-0"
